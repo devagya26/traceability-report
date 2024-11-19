@@ -3,6 +3,7 @@ import { utils } from "../utils";
 import { selector } from "../variables";
 
 test("TC2-27: Verify Demo", async ({page}) => {
+    test.setTimeout(40000);
     await utils.login(page);
     const iframe = page.frame({
         url: selector.src

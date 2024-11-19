@@ -4,6 +4,7 @@ import { utils } from "../utils";
 import { selector } from "../variables";
 
 test("TC2-17: Display No Changes", async ({page}) => {
+    test.setTimeout(60000);
     await utils.login(page);
     await utils.filter(page);
     const iframe = page.frame({

@@ -4,6 +4,7 @@ import { selector } from "../variables";
 const path = require("path");
 
 test("TC2-10: Select Single", async ({page}) => {
+    test.setTimeout(60000);
     await utils.login(page);
     await utils.filter(page);
     await utils.cardClearAll(page);

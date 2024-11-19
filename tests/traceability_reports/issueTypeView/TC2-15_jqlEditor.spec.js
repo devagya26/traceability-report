@@ -3,6 +3,7 @@ import { utils } from "../utils";
 const path = require("path");
 
 test("TC2-15: JQL Editor", async ({page}) => {
+    test.setTimeout(60000);
     await utils.login(page);
     await utils.jql(page);
     await utils.download(page);

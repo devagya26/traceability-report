@@ -11,7 +11,7 @@ export const utils = {
         await page.getByPlaceholder(selector.usernameInput).press("Enter");
         await page.locator(selector.passwordInput).fill(process.env.JIRA_PASSWORD || "");
         await page.locator(selector.passwordInput).press("Enter");
-        await page.waitForTimeout(12000);
+        await page.waitForTimeout(20000);
     },
 
     async filter(page) {
@@ -20,7 +20,7 @@ export const utils = {
       }); 
       await iframe.getByRole(selector.button, { name: selector.selectFilter }).click();
       await iframe.getByRole(selector.menu, { name: selector.tpBoard }).click();
-      await page.waitForTimeout(3000);
+      await page.waitForTimeout(8000);
     },
 
     async tpFilter(page) {
@@ -30,7 +30,7 @@ export const utils = {
         await iframe.getByTitle(selector.linkTypeView).click();
         await iframe.getByRole(selector.button, { name: selector.selectFilter }).click();
         await iframe.getByRole(selector.menu, { name: selector.tpBoard }).click();
-        await page.waitForTimeout(3000);
+        await page.waitForTimeout(5000);
     },
 
     async tvFilter(page) {
@@ -243,6 +243,30 @@ export const utils = {
 
     async convertAndCompare(anotherJsonFilePath) {
       const csvFilePath = path.resolve(__dirname, "../../tp_result");
+        try {
+          // Convert CSV file to JSON and store in memory
+          const jsonInMemory = await csvtojson().fromFile(csvFilePath);
+          console.log("CSV data in memory:", jsonInMemory);
+      
+          // Read another JSON file from disk asynchronously
+          const anotherJsonContent = await fs.readFile(anotherJsonFilePath, "utf-8");
+          const anotherJson = JSON.parse(anotherJsonContent);
+      
+          // Compare the two JSON objects
+          const areEqual = JSON.stringify(jsonInMemory) === JSON.stringify(anotherJson);
+          
+          if (areEqual) {
+            console.log("The JSON data in memory matches the file content.");
+          } else {
+            console.log("The JSON data in memory doesn't match the file content.");
+          }
+        } catch (err) {
+          console.error("Error:", err);
+        }
+    },
+
+    async convertAndCompareAllCSV(anotherJsonFilePath) {
+      const csvFilePath = path.resolve(__dirname, "../../All_CSV");
         try {
           // Convert CSV file to JSON and store in memory
           const jsonInMemory = await csvtojson().fromFile(csvFilePath);

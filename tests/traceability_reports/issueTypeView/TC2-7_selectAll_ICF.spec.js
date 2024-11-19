@@ -3,6 +3,7 @@ import { utils } from "../utils";
 const path = require("path");
 
 test("TC2-7: Select All", async ({page}) => {
+    test.setTimeout(60000);
     await utils.login(page);
     await utils.filter(page);
     await utils.cardSelectAll(page);

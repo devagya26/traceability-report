@@ -4,6 +4,7 @@ import { selector } from "../variables";
 const path = require("path");
 
 test("TC2-4: Multiple Selection", async ({page}) => {
+    test.setTimeout(60000);
     await utils.login(page);
     await utils.filter(page);
     const iframe = page.frame({

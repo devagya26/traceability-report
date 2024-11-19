@@ -62,10 +62,15 @@ export const selector = {
     issueCF : "Issue Card Fields",
     assignee : "id=assignee",
     issueType : "id=issueType",
-    status : "status",
+    status : "id=status",
+    fixVersions : "id=fixVersions",
     description : "id=description",
     summary : "id=summary",
     assigneeCF : "Assignee",
+    workRatio : "Work Ratio",
+    projectCF : "Project",
+    created : "Created",
+    creator : "Creator",
 
     //Link Type View - Table Fields 
     parent : "PARENT",
@@ -100,7 +105,6 @@ export const selector = {
     timeSpent : "timespent",
     project : "project",
     resolved : "resolutiondate",
-    status : "status",
 
     //Orphan values
     showOrphan : "Show Orphan Issues",
