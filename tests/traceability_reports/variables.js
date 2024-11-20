@@ -47,6 +47,7 @@ export const selector = {
     textBox : 'textbox',
     submit : "//span[normalize-space()='Save']",
     update : "Update view",
+    updateSaveView : "//button[@id='Filter1']//span[@class='css-70pa7n']//span[@class='css-1rnc8rc']//div[@class='sc-VigVT bRoPdj']//div//div//span[@title='Update view']//*[name()='svg']//*[name()='path' and contains(@fill,'currentCol')]",
 
     //Issue Type View - Table Fields
     tableFields : "Table Fields",

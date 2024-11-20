@@ -36,7 +36,7 @@ test("TC2-13: Updated Field - Save View", async ({page}) => {
     await page.waitForTimeout(10000);
 
     await iframe.getByTitle(selector.eye).click();
-    await iframe.getByTitle(selector.update).click();
+    await iframe.locator(selector.updateSaveView).click();
     await utils.download(page);
     await utils.convertAndCompare(path.resolve(__dirname, "../../../expectedTraceability/issueType/TC2-13_updateAndSave.json"));
 })
