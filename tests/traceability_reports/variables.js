@@ -76,6 +76,9 @@ export const selector = {
     creator : "Creator",
     updated : "Updated",
     lastViewed : "Last Viewed",
+    storyCard : "Story Points",
+    descriptionCF : "Description",
+    summaryICF : "Summary",
 
     //Link Type View - Table Fields 
     parent : "PARENT",
