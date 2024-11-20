@@ -217,6 +217,7 @@ export const utils = {
       await iframe.getByLabel("CSV").getByRole("menuitem", { name: "Export all records" }).click();
       const download = await downloadPromise;
       await download.saveAs((path.resolve(__dirname, "../../All_CSV")));
+      await page.waitForTimeout(10000);
     },
 
     async exportAsMarkdown(page){
@@ -239,6 +240,7 @@ export const utils = {
       await iframe.getByLabel("Markdown").getByRole("menuitem", { name: "Export all records" }).click();
       const download = await downloadPromise;
       await download.saveAs((path.resolve(__dirname, "../../All_Markdown")));
+      await page.waitForTimeout(10000);
     },
 
     async convertAndCompare(anotherJsonFilePath) {

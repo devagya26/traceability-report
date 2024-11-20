@@ -62,15 +62,20 @@ export const selector = {
     issueCF : "Issue Card Fields",
     assignee : "id=assignee",
     issueType : "id=issueType",
+    storyPoints : "id=storyPoints",
     status : "id=status",
     fixVersions : "id=fixVersions",
     description : "id=description",
     summary : "id=summary",
+    priorityICF : "id=priority",
     assigneeCF : "Assignee",
     workRatio : "Work Ratio",
     projectCF : "Project",
+    statusCF : "Status",
     created : "Created",
     creator : "Creator",
+    updated : "Updated",
+    lastViewed : "Last Viewed",
 
     //Link Type View - Table Fields 
     parent : "PARENT",
@@ -80,6 +85,8 @@ export const selector = {
     //Tree View 
     issueLT : "Issue Link Type",
     search : "Search",
+    inward : "Inward",
+    outward : "Outward",
 
     //Priority - Tree View
     priority : "Priority",
@@ -94,6 +101,8 @@ export const selector = {
     parentTV : "Parent",
     subtaskTV : "Subtasks",
     childIssuesTV : "Child Issues",
+    isBlockedBy : "Is Blocked By",
+    duplicates : "Duplicates",
 
     //Issue Type
     issueT : "Issue Type",
@@ -108,5 +117,7 @@ export const selector = {
 
     //Orphan values
     showOrphan : "Show Orphan Issues",
-    hideOrphan : "Hide Orphan Issues"
+    hideOrphan : "Hide Orphan Issues",
+    fixVersion : "Fix Versions"
+
 }
