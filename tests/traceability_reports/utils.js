@@ -63,9 +63,19 @@ export const utils = {
       await iframe.locator(selector.setting).click();
       await iframe.getByRole(selector.menuItem, { name: selector.fetchRemote }).click();
       await page.waitForTimeout(20000);
-      // await iframe.getByRole(selector.button, { name: selector.issueLT }).click();
       await iframe.getByLabel(selector.expandButton, { exact: true }).click();
       await page.waitForTimeout(25000);
+    },
+
+    async fetchRemoteEnabled(page){
+      const iframe = page.frame({
+        url: selector.src
+      }); 
+      await iframe.locator(selector.setting).click();
+      await iframe.getByRole(selector.menuItem, { name: selector.fetchRemote }).click();
+      await page.waitForTimeout(20000);
+      await iframe.getByLabel(selector.expandButton, { exact: true }).click();
+      await page.waitForTimeout(45000);
     },
 
     async fetchRemoteDisabled(page){
@@ -83,7 +93,7 @@ export const utils = {
         url: selector.src
       }); 
       await iframe.getByLabel(selector.expandButton, { exact: true }).click();
-      await page.waitForTimeout(10000);
+      await page.waitForTimeout(15000);
     },
 
     async helpBar(page) {
@@ -130,12 +140,42 @@ export const utils = {
       await iframe.getByRole(selector.button, { name: selector.clearAll }).click();
     },
 
-    async cardSelectAll(page){
+    async cardSelectMax(page){
       const iframe = page.frame({
         url: selector.src
       }); 
-      await iframe.getByRole(selector.button, { name: selector.issueCF }).click();
-      await iframe.getByRole(selector.button, { name: selector.selectAll }).click();
+      await utils.cardClearAll(page);
+      await iframe.getByRole(selector.menuItem, { name: selector.issueT }).click();
+      await iframe.getByRole(selector.menuItem, { name: selector.storyCard }).click();
+      await iframe.getByRole(selector.menuItem, { name: selector.fixVersion }).click();
+      await iframe.getByRole(selector.menuItem, { name: selector.priority }).click();
+      await iframe.getByRole(selector.menuItem, { name: selector.assigneeCF , exact: true }).click();
+      await iframe.getByRole(selector.menuItem, { name: selector.statusCF, exact: true }).click();
+      await iframe.getByRole(selector.menuItem, { name: selector.descriptionCF }).click();
+      await iframe.getByRole(selector.menuItem, { name: selector.summaryICF }).click();
+      await iframe.getByRole(selector.menuItem, { name: selector.scc }).click();
+      await iframe.getByRole(selector.menuItem, { name: selector.projectOverview }).click();
+      await iframe.getByRole(selector.menuItem, { name: selector.projectCF, exact: true }).click();
+      await iframe.getByRole(selector.menuItem, { name: selector.projectOverviewStatus }).click();
+      await iframe.getByRole(selector.menuItem, { name: selector.estimated }).click();
+      await iframe.getByRole(selector.menuItem, { name: selector.timeS }).click();
+      await iframe.getByRole(selector.menuItem, { name: selector.openForms }).click();
+      await iframe.getByRole(selector.menuItem, { name: selector.submitted }).click();
+      await iframe.getByRole(selector.menuItem, { name: selector.workRatio }).click();
+      await iframe.getByRole(selector.menuItem, { name: selector.flagged }).click();
+      await iframe.getByRole(selector.menuItem, { name: selector.target }).click();
+      await iframe.getByRole(selector.menuItem, { name: selector.targetEnd }).click();
+      await iframe.getByRole(selector.menuItem, { name: selector.labels }).click();
+      await iframe.getByRole(selector.menuItem, { name: selector.locked }).click();
+      await iframe.getByRole(selector.menuItem, { name: selector.issueColor }).click();
+      await iframe.getByRole(selector.menuItem, { name: selector.totalForms }).click();
+      await iframe.getByRole(selector.menuItem, { name: selector.rank }).click();
+      await iframe.getByRole(selector.menuItem, { name: selector.epicName }).click();
+      await iframe.getByRole(selector.menuItem, { name: selector.epicStatus }).click();
+      await iframe.getByRole(selector.menuItem, { name: selector.epicColour }).click();
+      await iframe.getByRole(selector.menuItem, { name: selector.created }).click();
+      await iframe.getByRole(selector.menuItem, { name: selector.creator }).click();
+      await page.waitForTimeout(2000);
     },
 
     async priorityClearAll(page){

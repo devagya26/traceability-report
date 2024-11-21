@@ -4,7 +4,7 @@ export const selector = {
     passwordInput : "//input[@id='password']",
     
     //iFrame Source & Tags
-    src : "https://connect.app.lxp.optimizoryapps.com/tracebilityReportModuleEntry.d02ffde919c8f7854cf7.html?xdm_e=https%3A%2F%2Fotpl-demo.atlassian.net&xdm_c=channel-com.otpl.jira.plugins.lxp__lxp-home-page&cp=&xdm_deprecated_addon_key_do_not_use=com.otpl.jira.plugins.lxp&lic=active&cv=1001.0.0-SNAPSHOT",
+    src : "https://connect.dev.lxp.optimizoryapps.com/tracebilityReportModuleEntry.b8accab18aef0be2b5b1.html?xdm_e=https%3A%2F%2Fotpl-demo.atlassian.net&xdm_c=channel-com.otpl.jira.plugins.lxp__lxp-home-page&cp=&xdm_deprecated_addon_key_do_not_use=com.otpl.jira.plugins.lxp&lic=active&cv=1001.0.0-SNAPSHOT",
     linksExplorer : "//span[normalize-space()='Links Explorer']",
     linkTypeView : "View related issues by their link types",
     treeView : "View related issues in tree hierarchy format",
@@ -48,6 +48,7 @@ export const selector = {
     submit : "//span[normalize-space()='Save']",
     update : "Update view",
     updateSaveView : "//button[@id='Filter1']//span[@class='css-70pa7n']//span[@class='css-1rnc8rc']//div[@class='sc-VigVT bRoPdj']//div//div//span[@title='Update view']//*[name()='svg']//*[name()='path' and contains(@fill,'currentCol')]",
+    updateView : "//span[@title='Update view']//*[name()='svg']//*[name()='path' and contains(@fill,'currentCol')]",
 
     //Issue Type View - Table Fields
     tableFields : "Table Fields",
@@ -71,6 +72,26 @@ export const selector = {
     priorityICF : "id=priority",
     assigneeCF : "Assignee",
     workRatio : "Work Ratio",
+    scc : "Status Category Changed",
+    timeSpent : "Time Spent",
+    projectOverview : "Project overview key",
+    projectOverviewStatus : "Project overview status",
+    estimated : "Estimated cost",
+    timeS : "Σ Time Spent",
+    submitted : "Submitted forms",
+    totalForms : "Total forms",
+    resolved : "Resolved",
+    flagged : "Flagged",
+    target : "Target start",
+    targetEnd : "Target end",
+    labels : "Labels",
+    locked : "Locked forms",
+    issueColor : "Issue color",
+    rank : "Rank",
+    openForms : "Open forms",
+    epicName : "Epic Name",
+    epicStatus : "Epic Status",
+    epicColour : "Epic Color",
     projectCF : "Project",
     statusCF : "Status",
     created : "Created",
@@ -80,6 +101,7 @@ export const selector = {
     storyCard : "Story Points",
     descriptionCF : "Description",
     summaryICF : "Summary",
+    
 
     //Link Type View - Table Fields 
     parent : "PARENT",
