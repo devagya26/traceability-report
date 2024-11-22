@@ -2,7 +2,7 @@ const { test } = require("@playwright/test");
 import { utils } from "../utils";
 import { selector } from "../variables";
 
-test("TC016.1: Select Maximum Options - Issue Card Fields ", async ({page}) => {
+test("TC016.2: Select More than 30 Options - Issue Card Fields ", async ({page}) => {
     test.setTimeout(120000);
     await utils.login(page);
     const iframe = page.frame({
