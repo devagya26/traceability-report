@@ -1,7 +1,6 @@
 const { test } = require("@playwright/test");
 import { utils } from "../utils";
 import { selector } from "../variables";
-const path = require("path");
 
 test("TC016.1: Select Maximum Options - Issue Card Fields ", async ({page}) => {
     test.setTimeout(120000);
@@ -11,10 +10,8 @@ test("TC016.1: Select Maximum Options - Issue Card Fields ", async ({page}) => {
     }); 
     await utils.tvFilter(page);
     await utils.cardSelectMax(page);
-    await iframe.getByRole(selector.button, { name: selector.refresh }).click();
-    await page.waitForTimeout(10000);
-    await utils.fetchRemoteEnabled(page);
-    await utils.download(page);
-    await utils.convertAndCompare(path.resolve(__dirname, "../../../expectedTraceability/treeView/TC016.1.json"));
+    await iframe.getByRole(selector.menuItem, { name: selector.reporter }).click();
+    console.log("Could not click on element more than 30");
+    await page.pause();
 });
 

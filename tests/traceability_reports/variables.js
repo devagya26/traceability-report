@@ -101,6 +101,7 @@ export const selector = {
     storyCard : "Story Points",
     descriptionCF : "Description",
     summaryICF : "Summary",
+    reporter : "Reporter",
     
 
     //Link Type View - Table Fields 

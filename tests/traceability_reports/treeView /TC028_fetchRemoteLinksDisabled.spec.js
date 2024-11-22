@@ -1,5 +1,6 @@
 const { test } = require("@playwright/test");
 import { utils } from "../utils";
+const path = require("path");
 
 test("TC028: Fetch Remote Links Disabled", async ({page}) => {
     test.setTimeout(90000);

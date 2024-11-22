@@ -1,7 +1,7 @@
 const { test } = require("@playwright/test");
-import { convert } from "../../../csv-to-json";
 import { utils } from "../utils";
 import { selector } from "../variables";
+const path = require("path");
 
 test("TC001: Select High - Priority", async ({page}) => {
     test.setTimeout(120000);

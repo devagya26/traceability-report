@@ -1,5 +1,6 @@
 const { test } = require("@playwright/test");
 import { utils } from "../utils";
+const path = require("path");
 
 test("TC025: Fetch Remote Links - CSV", async ({page}) => {
     test.setTimeout(90000);

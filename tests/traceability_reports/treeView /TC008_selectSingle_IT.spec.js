@@ -1,6 +1,7 @@
 const { test } = require("@playwright/test");
 import { utils } from "../utils";
 import { selector } from "../variables";
+const path = require("path");
 
 test("TC008: Select Single - Issue Type", async ({page}) => {
     test.setTimeout(120000);
