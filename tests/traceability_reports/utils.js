@@ -175,7 +175,7 @@ export const utils = {
       await iframe.getByRole(selector.menuItem, { name: selector.epicColour }).click();
       await iframe.getByRole(selector.menuItem, { name: selector.created }).click();
       await iframe.getByRole(selector.menuItem, { name: selector.creator }).click();
-      await page.waitForTimeout(2000);
+      await page.waitForTimeout(5000);
     },
 
     async priorityClearAll(page){
