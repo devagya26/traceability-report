@@ -1,4 +1,4 @@
-.env/
+.env
 .DS_Store
 /tests/.DS_Store
 /expectedTraceability/.DS_Store
