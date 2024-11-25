@@ -13,8 +13,11 @@ test("TC006: Select Multiple - Issue Link Type ", async ({page}) => {
     await utils.issueLinkClearAll(page);
     await iframe.getByRole(selector.menuItem, { name: selector.parentTV }).click();
     await iframe.getByRole(selector.menuItem, { name: selector.subtaskTV }).click();
+    await iframe.getByRole(selector.menuItem, { name: selector.isBlockedBy }).click();
     await iframe.getByRole(selector.menuItem, { name: selector.childIssuesTV }).click();
+    await iframe.getByRole(selector.menuItem, { name: selector.blocks }).click();
     await utils.fetchRemoteEnabled(page);
     await utils.download(page);
     await utils.convertAndCompare(path.resolve(__dirname, "../../../expectedTraceability/treeView/TC006.json"));
+    await page.pause();
 });

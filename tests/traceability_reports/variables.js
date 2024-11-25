@@ -130,6 +130,7 @@ export const selector = {
     childIssuesTV : "Child Issues",
     isBlockedBy : "Is Blocked By",
     duplicates : "Duplicates",
+    blocks : "Blocks",
 
     //Issue Type
     issueT : "Issue Type",
